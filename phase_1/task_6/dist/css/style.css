@@ -109,22 +109,13 @@ body {
   margin-left: 48px;
   width: 200px;
 }
-.wrapper section.article-content .banner-about .article-about .about-text span {
-  border-bottom-color: #000;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  display: inline-block;
+.wrapper section.article-content .banner-about .article-about .about-text > p {
+  text-decoration: underline;
+  font-variant: small-caps;
+  text-transform: capitalize;
   margin: 10px 0 0 0;
-  font-size: 18px;
-  line-height: 18px;
-}
-.wrapper section.article-content .banner-about .article-about .about-text span:first-letter {
   font-size: 24px;
   line-height: 24px;
-}
-.wrapper section.article-content .banner-about .article-about .about-text span:not(:first-child) {
-  margin: 0;
-  margin-top: 4px;
 }
 .wrapper section.article-content .banner-about .article-about > p {
   font-size: 12px;
@@ -138,7 +129,9 @@ body {
   margin: 0;
   margin-top: 20px;
   font-size: 116px;
-  line-height: 116px;
+  line-height: 125px;
+  /*oblique： 指定文本字体样式为倾斜的字体。人为的使文字倾斜，而不是去选取字体中的斜体字 */
+  font-style: oblique;
   color: #75b86b;
 }
 .wrapper section.article-content .banner-about .article-about .about-num {
@@ -222,7 +215,7 @@ section.atc {
 }
 section.atc div.atc-left {
   width: 415px;
-  height: 622px;
+  height: 623px;
   float: left;
   overflow: hidden;
 }

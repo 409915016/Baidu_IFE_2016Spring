@@ -133,22 +133,25 @@ body {
                 margin-left: 48px;
                 width: 200px;
                 .about-text {
-                    span {
-                        border-bottom-color: #000;
-                        border-bottom-style: solid;
-                        border-bottom-width: 2px;
-                        display: inline-block;
+                    > p {
+                        //                        border-bottom-color: #000;
+                        //                        border-bottom-style: solid;
+                        //                        border-bottom-width: 2px;
+                        text-decoration: underline;
+                        font-variant: small-caps;
+                        text-transform: capitalize;
+                        //display: inline-block;
                         margin: 10px 0 0 0;
-                        font-size: 18px;
-                        line-height: 18px;
-                        &:first-letter {
-                            font-size: 24px;
-                            line-height: 24px;
-                        }
-                        &:not(:first-child) {
-                            margin: 0;
-                            margin-top: 4px;
-                        }
+                        font-size: 24px;
+                        line-height: 24px;
+                        //                        &:first-letter {
+                        //                            font-size: 24px;
+                        //                            line-height: 24px;
+                        //                        }
+                        //                        &:not(:first-child) {
+                        //                            margin: 0;
+                        //                            margin-top: 4px;
+                        //                        }
                     }
                 }
                 >p {
@@ -163,7 +166,9 @@ body {
                     margin: 0;
                     margin-top: 20px;
                     font-size: 116px;
-                    line-height: 116px;
+                    line-height: 125px;
+                    /*oblique： 指定文本字体样式为倾斜的字体。人为的使文字倾斜，而不是去选取字体中的斜体字 */
+                    font-style: oblique;
                     color: @f-c-green;
                 }
                 .about-num {
@@ -255,7 +260,7 @@ section.atc {
     margin-bottom: 40px;
     div.atc-left {
         width: 415px;
-        height: 622px;
+        height: 623px;
         float: left;
         overflow: hidden;
         //background-color: aqua;
