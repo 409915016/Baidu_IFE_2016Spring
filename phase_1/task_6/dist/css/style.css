@@ -1,0 +1,468 @@
+.bg-red {
+  background-color: #d45d5c;
+}
+.heiti {
+  font-family: '黑体';
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑", "黑体";
+  background-color: #5b5b5b;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 980px;
+  height: 1386px;
+  background-color: #f1f1f1;
+}
+.wrapper section {
+  margin: 0 43px;
+}
+.wrapper section.header {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #938e8c;
+  height: auto;
+}
+.wrapper section.header .block {
+  display: inline-block;
+  height: 61px;
+  width: 110px;
+  position: relative;
+}
+.wrapper section.header .block span {
+  font-family: '黑体';
+  color: #fff;
+  padding: 0px 7px;
+  position: relative;
+  left: 0;
+  top: 65%;
+  font-size: 12px;
+  line-height: 12px;
+  vertical-align: bottom;
+}
+.wrapper section.header .block.fr span {
+  color: #d45d5c;
+  float: right;
+  padding-right: 0;
+  top: 75%;
+}
+.wrapper section.article-content {
+  margin-top: 35px;
+}
+.wrapper section.article-content .banner-about {
+  position: relative;
+}
+.wrapper section.article-content .banner-about .banner-img {
+  position: relative;
+  display: inline-block;
+  width: 641px;
+  height: 301px;
+}
+.wrapper section.article-content .banner-about .banner-img img {
+  width: 641px;
+  height: 301px;
+}
+.wrapper section.article-content .banner-about .banner-img::before,
+.wrapper section.article-content .banner-about .banner-img::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 191px;
+  height: 301px;
+}
+.wrapper section.article-content .banner-about .banner-img::before {
+  top: 0;
+  left: 0;
+  background-color: rgba(117, 184, 107, 0.5);
+}
+.wrapper section.article-content .banner-about .banner-img::after {
+  top: 0;
+  right: 0;
+  background-color: rgba(204, 128, 145, 0.5);
+}
+.wrapper section.article-content .banner-about .article-about {
+  line-height: 0;
+  position: relative;
+  height: 100%;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #cc8091;
+  margin-left: 48px;
+  width: 200px;
+}
+.wrapper section.article-content .banner-about .article-about .about-text span {
+  border-bottom-color: #000;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  display: inline-block;
+  margin: 10px 0 0 0;
+  font-size: 18px;
+  line-height: 18px;
+}
+.wrapper section.article-content .banner-about .article-about .about-text span:first-letter {
+  font-size: 24px;
+  line-height: 24px;
+}
+.wrapper section.article-content .banner-about .article-about .about-text span:not(:first-child) {
+  margin: 0;
+  margin-top: 4px;
+}
+.wrapper section.article-content .banner-about .article-about > p {
+  font-size: 12px;
+  line-height: 12px;
+  color: #676767;
+  font-style: italic;
+  margin: 10px 0 10px 0;
+  font-family: "楷体";
+}
+.wrapper section.article-content .banner-about .article-about > i {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 116px;
+  line-height: 116px;
+  color: #75b86b;
+}
+.wrapper section.article-content .banner-about .article-about .about-num {
+  margin-top: 10px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+.wrapper section.article-content .banner-about .article-about .about-num span {
+  font-size: 55px;
+  line-height: 55px;
+  color: #cc8091;
+}
+.wrapper section.article-content .banner-about .article-about .about-num .about-right p {
+  margin: 0;
+  font-size: 21px;
+  line-height: 21px;
+}
+.wrapper section.article-content .banner-about .article-about .about-num .about-right p:nth-of-type(1) {
+  margin-top: 18px;
+  color: #cc8091;
+}
+.wrapper section.article-content .banner-about .article-about .about-num .about-right p:nth-of-type(2) {
+  font-size: 12px;
+  line-height: 12px;
+  color: #676767;
+}
+section.article-text {
+  margin-top: 40px;
+  position: relative;
+  width: 641px;
+}
+section.article-text article {
+  padding-right: 30px;
+  vertical-align: top;
+  display: inline-block;
+}
+section.article-text article:last-of-type {
+  padding-right: 0px;
+}
+section.article-text article:nth-of-type(1) {
+  width: 35%;
+}
+section.article-text article:nth-of-type(2) {
+  width: 32%;
+}
+section.article-text article:nth-of-type(3) {
+  width: 30%;
+}
+section.article-text article:nth-of-type(3) p:nth-child(n+3) {
+  margin: 0;
+  line-height: 16px;
+}
+section.article-text article:nth-of-type(1) h2 {
+  color: #75b86b;
+}
+section.article-text article:nth-of-type(2) h2 {
+  color: #d2994f;
+}
+section.article-text article:nth-of-type(3) h2 {
+  color: #cc8091;
+}
+section.article-text article h2 {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+  text-decoration: underline;
+}
+section.article-text article p {
+  font-size: 12px;
+  line-height: 16px;
+  opacity: .7;
+}
+section.article-text article p span {
+  color: #cc8091;
+  font-style: italic;
+}
+section.atc {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+section.atc div.atc-left {
+  width: 415px;
+  height: 622px;
+  float: left;
+  overflow: hidden;
+}
+section.atc div.atc-left p {
+  margin: 0;
+  padding: 0;
+}
+section.atc div.atc-left b.atc-title {
+  font-family: '黑体';
+  font-size: 42px;
+  line-height: 58px;
+  font-weight: 600;
+  color: #11456b;
+}
+section.atc div.atc-left b.atc-title span {
+  font-size: 72px;
+  color: #f5e327;
+  font-style: italic;
+  margin-right: 25px;
+}
+section.atc div.atc-left b.atc-title-sec {
+  display: block;
+  padding-bottom: 20px;
+  font-size: 33px;
+  line-height: 33px;
+  color: #11456b;
+  border-bottom: 2px #11456b solid;
+  font-weight: 600;
+}
+section.atc div.atc-left article {
+  margin-top: 25px;
+  font-size: 12px;
+  line-height: 16px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+section.atc div.atc-left article span.first-lter {
+  font-family: "微软雅黑";
+  line-height: 70px;
+  font-size: 70px;
+  float: left;
+  color: #f5e327;
+  margin-right: 5px;
+}
+section.atc div.atc-left article p {
+  text-indent: 24px;
+  vertical-align: top;
+  color: #767777;
+}
+section.atc div.atc-left article p:nth-of-type(1) {
+  text-indent: 0px;
+}
+section.atc div.atc-left article img {
+  clear: right;
+  float: right;
+  margin: 15px 10px 8px 20px;
+}
+section.atc div.atc-left article .imgtop {
+  content: "";
+  float: right;
+  height: 70px;
+  width: 0px;
+}
+div.atc-right {
+  width: 460px;
+  height: 607px;
+  float: right;
+}
+div.atc-right div.atc-right-img,
+div.atc-right figure {
+  margin: 0;
+  width: 458px;
+  height: 275px;
+  position: relative;
+}
+div.atc-right div.atc-right-img div.img-info,
+div.atc-right figure div.img-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 61px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+div.atc-right div.atc-right-img div.img-info p,
+div.atc-right figure div.img-info p {
+  margin: 0;
+  margin-left: 40px;
+  margin-top: 8px;
+  line-height: 40px;
+  padding-left: 10px;
+  font-size: 26px;
+  color: #fff;
+  border-left: 3px #72b16a solid;
+}
+div.atc-right div.atc-right-img div.img-info p span,
+div.atc-right figure div.img-info p span {
+  font-size: 12px;
+  margin-left: 5px;
+  vertical-align: baseline;
+  font-style: italic;
+  color: #75b86b;
+  letter-spacing: 1.4px;
+}
+div.atc-right div.atc-right-bottom {
+  margin-top: 32px;
+  width: 459px;
+  height: 318px;
+  overflow: hidden;
+  position: relative;
+  background-color: #eeedd6;
+}
+div.atc-right div.atc-right-bottom > p {
+  margin: 20px 30px 0 40px;
+  font-size: 16px;
+  line-height: 20px;
+  position: relative;
+  vertical-align: baseline;
+}
+div.atc-right div.atc-right-bottom > p:before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -16px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid #11456b;
+}
+div.atc-right div.atc-right-bottom > p i {
+  float: right;
+  font-size: 12px;
+  line-height: 24px;
+}
+div.atc-right div.atc-right-bottom div.big-red {
+  margin-top: 37px;
+  float: left;
+  width: 260px;
+  height: 160px;
+  background-color: #d45d5c;
+  padding: 25px 10px 30px 10px;
+  overflow: hidden;
+}
+div.atc-right div.atc-right-bottom div.big-red span.num {
+  float: left;
+  font-size: 110px;
+  line-height: 110px;
+  color: #fff;
+  vertical-align: top;
+}
+div.atc-right div.atc-right-bottom div.big-red span.num:after {
+  content: "";
+  display: inline-block;
+  border-left: 2px #fff solid;
+  margin-top: 13px;
+  margin-left: 4px;
+  height: 86px;
+}
+div.atc-right div.atc-right-bottom div.big-red span {
+  vertical-align: top;
+}
+div.atc-right div.atc-right-bottom div.big-red div.big-red-inside {
+  margin-left: 80px;
+  padding-top: 15px;
+}
+div.atc-right div.atc-right-bottom div.big-red div.big-red-inside p {
+  font-family: '黑体';
+  color: #fff;
+  font-style: italic;
+  margin: 0;
+}
+div.atc-right div.atc-right-bottom div.big-red div.big-red-inside p:nth-of-type(1),
+div.atc-right div.atc-right-bottom div.big-red div.big-red-inside p:nth-of-type(2) {
+  font-size: 20px;
+}
+div.atc-right div.atc-right-bottom div.big-red div.big-red-inside p:nth-of-type(3) {
+  font-size: 12px;
+  font-style: normal;
+}
+div.atc-right div.atc-right-bottom div.big-red-right {
+  float: left;
+  margin-top: 30px;
+  width: 199px;
+  overflow: hidden;
+}
+div.atc-right div.atc-right-bottom div.big-red-right:before {
+  font-family: '黑体';
+  content: open-quote;
+  font-size: 72px;
+  color: #d45d5c;
+  float: left;
+  line-height: 0px;
+  margin-top: 40px;
+  margin-left: -21px;
+}
+div.atc-right div.atc-right-bottom div.big-red-right:after {
+  font-family: '黑体';
+  content: close-quote;
+  font-size: 72px;
+  color: #d45d5c;
+  float: right;
+  font-style: normal;
+  line-height: 10px;
+  margin-right: -15px;
+}
+div.atc-right div.atc-right-bottom div.big-red-right blockquote {
+  font-family: '黑体';
+  padding-top: 15px;
+  margin: 10px;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: italic;
+  color: #5a5b5b;
+  text-indent: 0px;
+  position: relative;
+}
+section.fotter {
+  border-top: 2px #938e8c solid;
+}
+section.fotter .block {
+  display: inline-block;
+  width: 110px;
+  position: relative;
+}
+section.fotter .block span {
+  font-family: '黑体';
+  color: #fff;
+  padding: 0px 7px;
+  position: relative;
+  left: 0;
+  top: 65%;
+  font-size: 12px;
+  line-height: 18px;
+  vertical-align: bottom;
+}
+section.fotter .block.fr span {
+  color: #d45d5c;
+  float: right;
+  padding-right: 0;
+  top: 75%;
+}
