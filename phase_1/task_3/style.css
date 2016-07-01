@@ -1,0 +1,86 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 微软雅黑;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    padding: 20px;
+    min-width: 768px;
+}
+
+div.wrapper {
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 20px;
+}
+
+img {
+    border: 1px solid #999;
+    width: 80px;
+}
+
+section {
+    padding: 20px;
+    background-color: #fafafa;
+    border: 1px solid #999;
+}
+
+section.team {
+    float: left;
+    width: 200px;
+    position: relative;
+}
+
+section.team > img {
+    float: left;
+}
+
+section.team > p {
+    text-align: center;
+    width: 175px;
+}
+
+section.main {
+    margin-left: 220px;
+    margin-right: 140px;
+}
+
+section.main > p {
+    margin: 20px 0;
+    text-indent: 1rem;
+}
+
+section.members {
+    float: right;
+    width: 120px;
+}
+
+section.members > img {
+    margin: 0px auto 20px;
+    float: left;
+}
+
+section.members > img:last-child {
+    margin-bottom: 0px;
+}
