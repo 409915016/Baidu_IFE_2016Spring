@@ -57,10 +57,9 @@ section:after {
 .sprite {
   background-image: url(../img/spritesheet.png);
   background-repeat: no-repeat;
-  display: block;
-  float: left;
+  display: inline-block;
 }
-.sprite.sprite-book {
+.sprite.sprite-book-d {
   background-position: -5px -5px;
   width: 12px;
   height: 12px;
@@ -70,98 +69,113 @@ section:after {
   width: 32px;
   height: 32px;
 }
-.sprite.sprite-down-w {
+.sprite.sprite-down-b {
   background-position: -69px -5px;
   width: 11px;
-  height: 6px;
-}
-.sprite.sprite-dropdown {
-  background-position: -90px -5px;
-  width: 6px;
-  height: 5px;
-}
-.sprite.sprite-file-b {
-  background-position: -106px -5px;
-  width: 12px;
   height: 11px;
 }
-.sprite.sprite-file-w {
-  background-position: -128px -5px;
+.sprite.sprite-down-blue {
+  background-position: -90px -5px;
+  width: 11px;
+  height: 11px;
+}
+.sprite.sprite-dropdown {
+  background-position: -111px -5px;
+  width: 8px;
+  height: 8px;
+}
+.sprite.sprite-dwon-w {
+  background-position: -129px -5px;
   width: 12px;
   height: 12px;
 }
-.sprite.sprite-left {
-  background-position: -150px -5px;
-  width: 9px;
-  height: 17px;
+.sprite.sprite-file-b {
+  background-position: -151px -5px;
+  width: 12px;
+  height: 12px;
 }
-.sprite.sprite-left-w-s {
-  background-position: -169px -5px;
-  width: 5px;
+.sprite.sprite-file-d {
+  background-position: -173px -5px;
+  width: 12px;
+  height: 12px;
+}
+.sprite.sprite-file-w {
+  background-position: -195px -5px;
+  width: 12px;
+  height: 12px;
+}
+.sprite.sprite-left-big {
+  background-position: -217px -5px;
+  width: 18px;
+  height: 18px;
+}
+.sprite.sprite-left-w {
+  background-position: -245px -5px;
+  width: 8px;
   height: 8px;
 }
 .sprite.sprite-logo {
-  background-position: -184px -5px;
+  background-position: -263px -5px;
   width: 36px;
   height: 36px;
 }
-.sprite.sprite-paper-b {
-  background-position: -230px -5px;
-  width: 11px;
+.sprite.sprite-paper-d {
+  background-position: -309px -5px;
+  width: 12px;
   height: 12px;
 }
 .sprite.sprite-paper-w {
-  background-position: -251px -5px;
-  width: 11px;
+  background-position: -331px -5px;
+  width: 12px;
   height: 12px;
 }
-.sprite.sprite-right {
-  background-position: -272px -5px;
-  width: 10px;
-  height: 17px;
+.sprite.sprite-right-big {
+  background-position: -353px -5px;
+  width: 18px;
+  height: 18px;
 }
-.sprite.sprite-right-b-s {
-  background-position: -292px -5px;
-  width: 7px;
+.sprite.sprite-right-d {
+  background-position: -381px -5px;
+  width: 12px;
   height: 12px;
 }
-.sprite.sprite-right-s {
-  background-position: -309px -5px;
-  width: 6px;
-  height: 11px;
+.sprite.sprite-right-dark {
+  background-position: -403px -5px;
+  width: 12px;
+  height: 12px;
 }
-.sprite.sprite-right-w-s {
-  background-position: -325px -5px;
-  width: 5px;
+.sprite.sprite-right-w {
+  background-position: -425px -5px;
+  width: 8px;
   height: 8px;
 }
 .sprite.sprite-search {
-  background-position: -340px -5px;
+  background-position: -443px -5px;
   width: 16px;
   height: 16px;
 }
-.sprite.sprite-share {
-  background-position: -366px -5px;
+.sprite.sprite-share-d {
+  background-position: -469px -5px;
   width: 12px;
-  height: 11px;
+  height: 12px;
 }
-.sprite.sprite-star {
-  background-position: -388px -5px;
+.sprite.sprite-star-d {
+  background-position: -491px -5px;
   width: 12px;
-  height: 11px;
+  height: 12px;
 }
 .sprite.sprite-switch {
-  background-position: -410px -5px;
-  width: 27px;
+  background-position: -513px -5px;
+  width: 38px;
   height: 38px;
 }
 .sprite.sprite-table {
-  background-position: -447px -5px;
+  background-position: -561px -5px;
   width: 12px;
-  height: 11px;
+  height: 12px;
 }
 .sprite.sprite-user {
-  background-position: -469px -5px;
+  background-position: -583px -5px;
   width: 16px;
   height: 16px;
 }
@@ -203,15 +217,15 @@ div.header div.search i.sprite-search {
 }
 div.header a.login {
   float: right;
+  line-height: 56px;
 }
 div.header a.login i.sprite-user {
-  margin-top: 20px;
+  vertical-align: sub;
 }
 div.header a.login span {
   color: #ffffff;
   font: 12px 'Adobe Heiti Std';
-  line-height: 56px;
-  margin-left: 3px;
+  vertical-align: text-bottom;
 }
 aside {
   position: fixed;
@@ -260,7 +274,7 @@ aside div.user-info:after {
 }
 aside div.user-info span {
   float: left;
-  padding: 0 30px;
+  padding: 0 25px;
   color: #6e8095;
   font: 400 14px / 18px SimHei;
 }
@@ -270,6 +284,46 @@ aside div.user-info div.ver-line {
   width: 1px;
   background-color: #313545;
   height: 29px;
+}
+aside div.linklist {
+  background-color: #383d4e;
+  margin-top: 15px;
+  margin-left: 0;
+  padding-left: 45px;
+}
+aside div.linklist.no-bg {
+  background-color: #2a2e3d;
+}
+aside div.linklist .text-dark {
+  color: #6e8095;
+}
+aside div.linklist a {
+  line-height: 30px;
+}
+aside div.linklist a span {
+  color: #ededf0;
+  font: 400 12px / 12px SimHei;
+  margin-left: 5px;
+}
+aside div.linklist ul {
+  padding-left: 25px;
+}
+aside div.linklist i {
+  position: relative;
+  top: 1px;
+}
+aside div.linklist .sprite-file-b,
+aside div.linklist .sprite-file-w,
+aside div.linklist .sprite-paper-w,
+aside div.linklist .sprite-paper-d {
+  position: relative;
+  left: 6px;
+  top: 2px;
+}
+aside div.linklist .sprite-right-d,
+aside div.linklist .sprite-dwon-w {
+  position: relative;
+  top: 2px;
 }
 nav {
   position: fixed;
@@ -296,9 +350,8 @@ nav p:last-child {
 }
 div.content {
   margin-left: 260px;
-  padding-top: 107px;
+  padding-top: 110px;
   padding-left: 60px;
   background-color: #eee;
-  width: 100%;
   height: 1000px;
 }

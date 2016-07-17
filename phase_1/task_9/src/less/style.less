@@ -60,14 +60,14 @@ div.header {
     }
     a.login {
         float: right;
+        line-height: 56px;
         i.sprite-user {
-            margin-top: 20px;
+                vertical-align: sub;
         }
         span {
             color: #ffffff;
             font: 12px 'Adobe Heiti Std';
-            line-height: 56px;
-            margin-left: 3px;
+            vertical-align: text-bottom;
         }
     }
 }
@@ -82,9 +82,7 @@ aside {
     //padding-top: 20px;
     div.aside-block {
         margin-left: 45px;
-        //padding-top: 15px;
         margin-top: 20px;
-        
     }
     div.user-avatar {
         position: relative;
@@ -109,14 +107,13 @@ aside {
             height: 57px;
             width: 57px;
             border-radius: 50%;
-            
         }
     }
     div.user-info {
         .clearfix;
         span {
             float: left;
-            padding: 0 30px;
+            padding: 0 25px;
             color: #6e8095;
             font: 400 14px / 18px SimHei;
         }
@@ -126,9 +123,44 @@ aside {
             width: 1px;
             background-color: #313545;
             height: 29px;
-            
         }
-        
+    }
+    div.linklist {
+        background-color: #383d4e;
+        margin-top: 15px;
+        margin-left: 0;
+        padding-left: 45px;
+        &.no-bg {
+            background-color: @dark-blue;
+        }
+        .text-dark {
+            color: #6e8095;
+        }
+        a {
+            line-height: 30px;
+            span {
+                color: #ededf0;
+                font: 400 12px / 12px SimHei;
+                margin-left: 5px;
+            }
+        }
+        ul {
+            padding-left: 25px;
+        }
+        i {
+            position: relative;
+            top: 1px;
+        }
+        .sprite-file-b, .sprite-file-w, .sprite-paper-w, .sprite-paper-d{
+            position: relative;
+            left: 6px;
+            top: 2px;
+        }
+        .sprite-right-d, .sprite-dwon-w {
+            position: relative;
+            top: 2px;
+        }
+
     }
 }
 
@@ -158,9 +190,9 @@ nav {
 
 div.content {
     margin-left: 260px;
-    padding-top: 56+31+20px;
+    padding-top: 110px;
     padding-left: 60px;
     background-color: #eee;
-    width: 100%;
+    //width: ~"calc(100%-108px)";
     height: 1000px;
 }
