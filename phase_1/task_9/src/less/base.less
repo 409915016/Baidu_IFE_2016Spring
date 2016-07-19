@@ -58,9 +58,48 @@ body {
 
 .wrapper {
     width: 100%;
-    //min-width: 1300px;
+    min-width: 1200px;
 }
 
 section {
     .clearfix();
 }
+
+/*
+function
+*/
+.turnover-color-block-func (@block-border-color, @border-width, @nth: 1) when ( iscolor(@block-border-color)) {
+    &:nth-of-type(@{nth}) {
+        border-left: @border-width @block-border-color solid;
+        &:after {
+            background-color: @block-border-color;
+        }
+    }
+}
+
+
+.hover-trans(@type, @color) when (@type =color) and (iscolor(@color)) {
+    transition: all .15s ease-in-out;
+    &:hover {
+        color: @color;
+        //transition: all .15s ease-in-out;
+    }
+}
+
+.hover-trans(@type, @color) when (@type =bgc) and (iscolor(@color)) {
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: @color;
+        //transition: all .15s ease-in-out;
+    }
+}
+
+.focus-trans(@type, @width) when (@type =width) and (isnumber(@width)) {
+    transition: all .5s ease-in-out;
+    &:focus {
+        width: @width;
+        //transition: all .15s ease-in-out;
+    }
+}
+
+
