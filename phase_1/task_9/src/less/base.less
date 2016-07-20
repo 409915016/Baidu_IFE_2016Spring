@@ -34,6 +34,9 @@ option,
 input[type="text"],
 textarea {
     -webkit-appearance: none;
+    //fix dropdown style display error in firefox 
+    //see http://stackoverflow.com/questions/5748351/webkit-appearance-none-firefox-equivalent
+    //and https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance
     -moz-appearance: none;
     outline: none;
     border: 0;
@@ -57,9 +60,6 @@ section {
 
 /*
 some table normalize style in here
-
-
-
 */
 
 th {
