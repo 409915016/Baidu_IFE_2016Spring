@@ -5,6 +5,8 @@
 @dark-blue: #2a2e3d;
 @btn-blue: #398bc2;
 
+
+
 /*
 turnover-color-block
 */
@@ -645,7 +647,6 @@ div.info-content {
         height: 100px;
     }
     div.sreach-post {
-
         p {
             float: left;
         }
@@ -658,4 +659,40 @@ div.info-content {
             float: right;
         }
     }
+}
+
+div.ranglist {
+    padding: 15px 35px;
+    color: #000;
+    th,
+    td {
+        padding: 3px 20px;
+        font: 500 13px SimHei;
+    }
+    thead {
+        tr {
+            .hover-trans(bgc, #fff);
+        }
+        th {
+            .hover-trans(bgc, #fff);
+        }
+    }
+    tr {
+        .hover-trans(bgc, #f3f5f6);
+        transition: all .1s ease-in-out;
+    }
+    
+    .ranglist-line(0.85, #ed6e52, 1);
+    .ranglist-line(0.80, #ef8150, 2);
+    .ranglist-line(0.75, #f19f4f, 3);
+    .ranglist-line(0.70, #7fcbf0, 4);
+    .ranglist-line(0.65, #7ecaef, 5);
+    .ranglist-line(0.60, #7ecaf0, 6);
+    .ranglist-line(0.55, #7ecaef, 7);
+    .ranglist-line(0.50, #7fcbf0, 8);
+    .ranglist-line(0.45, #7fcbf0, 9);
+    .ranglist-line(0.40, #91cceb, 10);
+    
+    
+       
 }

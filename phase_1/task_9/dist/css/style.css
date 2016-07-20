@@ -1,6 +1,17 @@
 /*
 function
 */
+/*
+function
+*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
 .clearfix:before,
 .clearfix:after {
   content: "";
@@ -58,6 +69,14 @@ section:after {
 section:after {
   clear: both;
 }
+section:before,
+section:after {
+  content: "";
+  display: table;
+}
+section:after {
+  clear: both;
+}
 /*
 some table normalize style in here
 
@@ -66,6 +85,11 @@ some table normalize style in here
 */
 th {
   font-weight: 500;
+}
+th,
+td {
+  padding: 0px 20px;
+  border: 1px solid #ddddde;
 }
 .sprite {
   background-image: url(../img/spritesheet.png);
@@ -229,6 +253,9 @@ div.header div.search input {
 div.header div.search input:focus {
   width: 300px;
 }
+div.header div.search input:focus {
+  width: 300px;
+}
 div.header div.search i.sprite-search {
   position: absolute;
   top: 38%;
@@ -283,6 +310,14 @@ aside div.user-avatar div.circle {
   height: 57px;
   width: 57px;
   border-radius: 50%;
+}
+aside div.user-info:before,
+aside div.user-info:after {
+  content: "";
+  display: table;
+}
+aside div.user-info:after {
+  clear: both;
 }
 aside div.user-info:before,
 aside div.user-info:after {
@@ -587,6 +622,18 @@ section.info-row div.turnover-block:nth-of-type(1) {
 section.info-row div.turnover-block:nth-of-type(1):after {
   background-color: #43b29d;
 }
+section.info-row div.turnover-block:nth-of-type(1) {
+  border-left: 3px #43b29d solid;
+}
+section.info-row div.turnover-block:nth-of-type(1):after {
+  background-color: #43b29d;
+}
+section.info-row div.turnover-block:nth-of-type(2) {
+  border-left: 3px #388ac1 solid;
+}
+section.info-row div.turnover-block:nth-of-type(2):after {
+  background-color: #388ac1;
+}
 section.info-row div.turnover-block:nth-of-type(2) {
   border-left: 3px #388ac1 solid;
 }
@@ -598,6 +645,18 @@ section.info-row div.turnover-block:nth-of-type(3) {
 }
 section.info-row div.turnover-block:nth-of-type(3):after {
   background-color: #cf4a36;
+}
+section.info-row div.turnover-block:nth-of-type(3) {
+  border-left: 3px #cf4a36 solid;
+}
+section.info-row div.turnover-block:nth-of-type(3):after {
+  background-color: #cf4a36;
+}
+section.info-row div.turnover-block:nth-of-type(4) {
+  border-left: 3px #e2cd47 solid;
+}
+section.info-row div.turnover-block:nth-of-type(4):after {
+  background-color: #e2cd47;
 }
 section.info-row div.turnover-block:nth-of-type(4) {
   border-left: 3px #e2cd47 solid;
@@ -770,6 +829,10 @@ div.table-content div.content div[class|="content"] th:hover,
 div.table-content div.content div[class|="content"] td:hover {
   background-color: #ddd;
 }
+div.table-content div.content div[class|="content"] th:hover,
+div.table-content div.content div[class|="content"] td:hover {
+  background-color: #ddd;
+}
 div.info-content {
   position: relative;
   padding: 15px 35px;
@@ -790,6 +853,14 @@ div.info-content .info-title {
 }
 div.info-content div.price-principal {
   width: 100%;
+}
+div.info-content div.price-principal:before,
+div.info-content div.price-principal:after {
+  content: "";
+  display: table;
+}
+div.info-content div.price-principal:after {
+  clear: both;
 }
 div.info-content div.price-principal:before,
 div.info-content div.price-principal:after {
@@ -832,4 +903,231 @@ div.info-content div.sreach-post button {
 }
 div.info-content div.sreach-post button {
   float: right;
+}
+div.ranglist {
+  padding: 15px 35px;
+  color: #000;
+}
+div.ranglist th,
+div.ranglist td {
+  padding: 3px 20px;
+  font: 500 13px SimHei;
+}
+div.ranglist thead tr {
+  transition: all 0.3s ease-in-out;
+}
+div.ranglist thead tr:hover {
+  background-color: #fff;
+}
+div.ranglist thead tr:hover {
+  background-color: #fff;
+}
+div.ranglist thead th {
+  transition: all 0.3s ease-in-out;
+}
+div.ranglist thead th:hover {
+  background-color: #fff;
+}
+div.ranglist thead th:hover {
+  background-color: #fff;
+}
+div.ranglist tr {
+  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+div.ranglist tr:hover {
+  background-color: #f3f5f6;
+}
+div.ranglist tr:hover {
+  background-color: #f3f5f6;
+}
+div.ranglist tbody tr:nth-of-type(1) td:nth-of-type(2) span.line {
+  position: relative;
+  margin-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  background-color: #dcdcdc;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(1) td:nth-of-type(2) span.line:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 144.5px;
+  background-color: #ed6e52;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(2) td:nth-of-type(2) span.line {
+  position: relative;
+  margin-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  background-color: #dcdcdc;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(2) td:nth-of-type(2) span.line:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 136px;
+  background-color: #ef8150;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(3) td:nth-of-type(2) span.line {
+  position: relative;
+  margin-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  background-color: #dcdcdc;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(3) td:nth-of-type(2) span.line:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 127.5px;
+  background-color: #f19f4f;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(4) td:nth-of-type(2) span.line {
+  position: relative;
+  margin-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  background-color: #dcdcdc;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(4) td:nth-of-type(2) span.line:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 119px;
+  background-color: #7fcbf0;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(5) td:nth-of-type(2) span.line {
+  position: relative;
+  margin-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  background-color: #dcdcdc;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(5) td:nth-of-type(2) span.line:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 110.5px;
+  background-color: #7ecaef;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(6) td:nth-of-type(2) span.line {
+  position: relative;
+  margin-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  background-color: #dcdcdc;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(6) td:nth-of-type(2) span.line:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 102px;
+  background-color: #7ecaf0;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(7) td:nth-of-type(2) span.line {
+  position: relative;
+  margin-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  background-color: #dcdcdc;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(7) td:nth-of-type(2) span.line:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 93.5px;
+  background-color: #7ecaef;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(8) td:nth-of-type(2) span.line {
+  position: relative;
+  margin-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  background-color: #dcdcdc;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(8) td:nth-of-type(2) span.line:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 85px;
+  background-color: #7fcbf0;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(9) td:nth-of-type(2) span.line {
+  position: relative;
+  margin-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  background-color: #dcdcdc;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(9) td:nth-of-type(2) span.line:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 76.5px;
+  background-color: #7fcbf0;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(10) td:nth-of-type(2) span.line {
+  position: relative;
+  margin-left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 170px;
+  background-color: #dcdcdc;
+  height: 4px;
+}
+div.ranglist tbody tr:nth-of-type(10) td:nth-of-type(2) span.line:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 68px;
+  background-color: #91cceb;
+  height: 4px;
 }
