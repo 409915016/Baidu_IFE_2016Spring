@@ -35,6 +35,33 @@ function
     }
 }
 
+.ranglist-line(@percent, @color, @nth) when (iscolor(@color)) {
+    tbody tr:nth-of-type(@{nth}) td:nth-of-type(2) {
+        span.line {
+            position: relative;
+            margin-left: 15px;
+            display: inline-block;
+            vertical-align: middle;
+            width: 170px;
+            background-color: #dcdcdc;
+            height: 4px;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                display: block;
+                width: 170px*@percent;
+                background-color: @color;
+                height: 4px;
+            }
+        }
+    }
+}
+
+
+
+
 
 // Mixin itself
 .clearfix {
