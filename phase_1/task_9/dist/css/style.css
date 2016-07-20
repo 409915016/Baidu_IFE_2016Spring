@@ -1,6 +1,6 @@
-* {
-  box-sizing: border-box;
-}
+/*
+function
+*/
 .clearfix:before,
 .clearfix:after {
   content: "";
@@ -8,6 +8,9 @@
 }
 .clearfix:after {
   clear: both;
+}
+* {
+  box-sizing: border-box;
 }
 .fr {
   float: right;
@@ -33,7 +36,7 @@ a {
 button,
 select,
 option,
-input,
+input[type="text"],
 textarea {
   -webkit-appearance: none;
   outline: none;
@@ -56,8 +59,14 @@ section:after {
   clear: both;
 }
 /*
-function
+some table normalize style in here
+
+
+
 */
+th {
+  font-weight: 500;
+}
 .sprite {
   background-image: url(../img/spritesheet.png);
   background-repeat: no-repeat;
@@ -367,8 +376,8 @@ div.content div.content-wrapper {
   margin-left: 260px;
   padding-top: 110px;
   padding-left: 60px;
-  width: 890px;
-  height: 1000px;
+  width: 960px;
+  height: 1500px;
 }
 section.search-row {
   width: 890px;
@@ -460,6 +469,8 @@ section.search-row div.search-btn button {
   font: 400 12px / 26px SimHei;
   border-radius: 2px;
   background-color: #398bc2;
+}
+section.search-row div.search-btn button {
   margin-top: 15px;
 }
 section.history-row {
@@ -594,17 +605,29 @@ section.info-row div.turnover-block:nth-of-type(4) {
 section.info-row div.turnover-block:nth-of-type(4):after {
   background-color: #e2cd47;
 }
+/*table-row default sytle */
 section.table-row {
   margin-top: 8px;
   width: 100%;
 }
 section.table-row div.project-table {
-  width: 530px;
   height: 315px;
   background-color: #fff;
   border-radius: 8px;
   border: 1px solid #e5e5e5;
   box-shadow: 0 0 2px 0px #ddd;
+  float: left;
+}
+section.table-row div.project-table.table {
+  width: 530px;
+}
+section.table-row div.project-table.info {
+  width: 350px;
+  margin-left: 10px;
+}
+section.table-row div.project-table.cale {
+  width: 350px;
+  margin-right: 10px;
 }
 section.table-row div.project-table div.table-title {
   height: 40px;
@@ -618,26 +641,26 @@ section.table-row div.project-table div.table-title p {
   font: 400 12px / 40px SimHei;
   text-indent: 20px;
 }
-section.table-row div.project-table div.table-content {
+div.project-table div.table-content {
   padding: 10px 15px;
+  text-align: center;
 }
-section.table-row div.project-table div.table-content .tabs input {
+div.project-table div.table-content .tabs input {
   display: none;
   cursor: pointer;
 }
-section.table-row div.project-table div.table-content .tabs input#tab-2 {
+div.project-table div.table-content .tabs input#tab-2 {
   left: 120px;
 }
-section.table-row div.project-table div.table-content .tabs input#tab-3 {
+div.project-table div.table-content .tabs input#tab-3 {
   left: 240px;
 }
-section.table-row div.project-table div.table-content .tabs input#tab-4 {
+div.project-table div.table-content .tabs input#tab-4 {
   left: 360px;
 }
-section.table-row div.project-table div.table-content .tabs label {
+div.project-table div.table-content .tabs label {
   background: #e5e5e5;
   height: 26px;
-  padding: 0 10px;
   float: left;
   width: 85px;
   margin-right: 5px;
@@ -652,35 +675,35 @@ section.table-row div.project-table div.table-content .tabs label {
   border: 1px solid #e5e5e5;
   border-bottom: none;
 }
-section.table-row div.project-table div.table-content .tabs input:hover + label {
+div.project-table div.table-content .tabs input:hover + label {
   background: #5ba4a4;
 }
-section.table-row div.project-table div.table-content .tabs label:first-of-type {
+div.project-table div.table-content .tabs label:first-of-type {
   z-index: 5;
   box-shadow: 2px 0 2px rgba(0, 0, 0, 0.1);
 }
-section.table-row div.project-table div.table-content .tab-label-2 {
+div.project-table div.table-content .tab-label-2 {
   z-index: 4;
 }
-section.table-row div.project-table div.table-content .tab-label-3 {
+div.project-table div.table-content .tab-label-3 {
   z-index: 3;
 }
-section.table-row div.project-table div.table-content .tab-label-4 {
+div.project-table div.table-content .tab-label-4 {
   z-index: 2;
 }
-section.table-row div.project-table div.table-content .tab-label-5 {
+div.project-table div.table-content .tab-label-5 {
   z-index: 1;
 }
-section.table-row div.project-table div.table-content .tabs input:checked + label {
+div.project-table div.table-content .tabs input:checked + label {
   background: #fff;
   z-index: 7;
   border: 1px solid #cacbcb;
   border-bottom: none;
 }
-section.table-row div.project-table div.table-content .clear-shadow {
+div.project-table div.table-content .clear-shadow {
   clear: both;
 }
-section.table-row div.project-table div.table-content .content {
+div.project-table div.table-content .content {
   background: #fff;
   position: relative;
   width: 100%;
@@ -689,11 +712,12 @@ section.table-row div.project-table div.table-content .content {
   border: 1px solid #cacbcb;
   border-radius: 0 2px 2px 2px;
 }
-section.table-row div.project-table div.table-content .content div {
+div.project-table div.table-content .content div {
   position: absolute;
+  color: #535353;
+  font: 400 12px / 30px SimSun;
   top: 0;
   left: 0;
-  padding: 10px 40px;
   z-index: 1;
   opacity: 0;
   -webkit-transition: opacity linear 0.1s;
@@ -702,11 +726,11 @@ section.table-row div.project-table div.table-content .content div {
   -ms-transition: opacity linear 0.1s;
   transition: opacity linear 0.1s;
 }
-section.table-row div.project-table div.table-content .tabs input.tab-selector-1:checked ~ .content .content-1,
-section.table-row div.project-table div.table-content .tabs input.tab-selector-2:checked ~ .content .content-2,
-section.table-row div.project-table div.table-content .tabs input.tab-selector-3:checked ~ .content .content-3,
-section.table-row div.project-table div.table-content .tabs input.tab-selector-4:checked ~ .content .content-4,
-section.table-row div.project-table div.table-content .tabs input.tab-selector-5:checked ~ .content .content-5 {
+div.project-table div.table-content .tabs input.tab-selector-1:checked ~ .content .content-1,
+div.project-table div.table-content .tabs input.tab-selector-2:checked ~ .content .content-2,
+div.project-table div.table-content .tabs input.tab-selector-3:checked ~ .content .content-3,
+div.project-table div.table-content .tabs input.tab-selector-4:checked ~ .content .content-4,
+div.project-table div.table-content .tabs input.tab-selector-5:checked ~ .content .content-5 {
   z-index: 100;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
@@ -717,11 +741,11 @@ section.table-row div.project-table div.table-content .tabs input.tab-selector-5
   -ms-transition: opacity ease-out 0.2s 0.1s;
   transition: opacity ease-out 0.2s 0.1s;
 }
-section.table-row div.project-table div.table-content .content div h2,
-section.table-row div.project-table div.table-content .content div h3 {
+div.project-table div.table-content .content div h2,
+div.project-table div.table-content .content div h3 {
   color: #398080;
 }
-section.table-row div.project-table div.table-content .content div p {
+div.project-table div.table-content .content div p {
   font-size: 14px;
   line-height: 22px;
   font-style: italic;
@@ -731,4 +755,81 @@ section.table-row div.project-table div.table-content .content div p {
   padding-left: 15px;
   font-family: Cambria, Georgia, serif;
   border-left: 8px solid rgba(63, 148, 148, 0.1);
+}
+div.table-content div.content div[class|="content"] {
+  padding: 20px 35px;
+}
+div.table-content div.content div[class|="content"] th,
+div.table-content div.content div[class|="content"] td {
+  padding: 0px 20px;
+  border: 1px solid #ddddde;
+  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+div.table-content div.content div[class|="content"] th:hover,
+div.table-content div.content div[class|="content"] td:hover {
+  background-color: #ddd;
+}
+div.info-content {
+  position: relative;
+  padding: 15px 35px;
+}
+div.info-content hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}
+div.info-content p,
+div.info-content span {
+  color: #535353;
+  font: 400 12px / 24.57px 'Microsoft YaHei';
+  text-indent: 15px;
+}
+div.info-content .info-title {
+  color: #c3c2c2;
+  font: 400 12px / 20.57px 'Microsoft YaHei';
+}
+div.info-content div.price-principal {
+  width: 100%;
+}
+div.info-content div.price-principal:before,
+div.info-content div.price-principal:after {
+  content: "";
+  display: table;
+}
+div.info-content div.price-principal:after {
+  clear: both;
+}
+div.info-content div.price-principal .col-3 {
+  border: 1px solid #e5e5e5;
+  border-left: none;
+  border-right: none;
+  width: 34%;
+  float: left;
+}
+div.info-content div.price-principal .col-7 {
+  border: 1px solid #e5e5e5;
+  border-right: none;
+  width: 66%;
+  float: left;
+}
+div.info-content div.detail {
+  height: 100px;
+}
+div.info-content div.sreach-post p {
+  float: left;
+}
+div.info-content div.sreach-post input[type="checkbox"] {
+  vertical-align: text-bottom;
+  margin-right: 8px;
+}
+div.info-content div.sreach-post button {
+  width: 51px;
+  height: 26px;
+  color: #ffffff;
+  font: 400 12px / 26px SimHei;
+  border-radius: 2px;
+  background-color: #398bc2;
+}
+div.info-content div.sreach-post button {
+  float: right;
 }

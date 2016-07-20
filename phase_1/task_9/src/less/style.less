@@ -1,3 +1,4 @@
+@import "func.less";
 @import "base.less";
 @import "sprite.less";
 @blue: #228abf;
@@ -12,9 +13,21 @@ turnover-color-block
 @c-blue: #388ac1;
 @c-red: #cf4a36;
 @c-yellow: #e2cd47;
-@content-width: 890px;
+@content-width: 960px;
+@content-height: 1500px;
 @turnover-color-block-width: 60px;
 @turnover-color-block-height: 46px;
+.button-style() {
+    button {
+        width: 51px;
+        height: 26px;
+        color: #ffffff;
+        font: 400 12px / 26px SimHei;
+        border-radius: 2px;
+        background-color: @btn-blue;
+    }
+}
+
 //header aside nav
 //z-index: 10
 //fix the float element over the nav and header
@@ -195,7 +208,7 @@ div.content {
         padding-top: 110px;
         padding-left: 60px;
         width: @content-width;
-        height: 1000px;
+        height: @content-height;
     }
 }
 
@@ -284,13 +297,8 @@ section.search-row {
         }
     }
     div.search-btn {
+        .button-style();
         button {
-            width: 51px;
-            height: 26px;
-            color: #ffffff;
-            font: 400 12px / 26px SimHei;
-            border-radius: 2px;
-            background-color: @btn-blue;
             margin-top: 15px;
         }
     }
@@ -411,16 +419,30 @@ section.info-row {
     }
 }
 
+
+/*table-row default sytle */
+
 section.table-row {
     margin-top: 8px;
     width: 100%;
     div.project-table {
-        width: 530px;
         height: 315px;
         background-color: #fff;
         border-radius: 8px;
         border: 1px solid #e5e5e5;
         box-shadow: 0 0 2px 0px #ddd;
+        float: left;
+        &.table {
+            width: 530px;
+        }
+        &.info {
+            width: 350px;
+            margin-left: 10px;
+        }
+        &.cale {
+            width: 350px;
+            margin-right: 10px;
+        }
         div.table-title {
             height: 40px;
             width: 100%;
@@ -433,136 +455,207 @@ section.table-row {
                 text-indent: 20px;
             }
         }
-        div.table-content {
-            padding: 10px 15px;
-            .tabs input {
-                display: none;
-                cursor: pointer;
+    }
+}
+
+div.project-table {
+    div.table-content {
+        padding: 10px 15px;
+        text-align: center;
+        .tabs input {
+            display: none;
+            cursor: pointer;
+        }
+        .tabs input#tab-2 {
+            left: 120px;
+        }
+        .tabs input#tab-3 {
+            left: 240px;
+        }
+        .tabs input#tab-4 {
+            left: 360px;
+        }
+        .tabs label {
+            background: #e5e5e5;
+            height: 26px;
+            //                position: relative;
+            //padding: 0 10px;
+            float: left;
+            //                display: block;
+            width: 85px;
+            margin-right: 5px;
+            color: #535353;
+            font: 400 12px / 26px 'Microsoft YaHei';
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+            border-radius: 3px 3px 0 0;
+            border: 1px solid #e5e5e5;
+            border-bottom: none;
+        }
+        .tabs label:after {
+            //                content: '';
+            //                background: #fff;
+            //                position: absolute;
+            //                bottom: -2px;
+            //                left: 0;
+            //                width: 100%;
+            //                height: 2px;
+            //                display: block;
+        }
+        .tabs input:hover + label {
+            background: #5ba4a4;
+        }
+        .tabs label:first-of-type {
+            z-index: 5;
+            box-shadow: 2px 0 2px rgba(0, 0, 0, 0.1);
+        }
+        .tab-label-2 {
+            z-index: 4;
+        }
+        .tab-label-3 {
+            z-index: 3;
+        }
+        .tab-label-4 {
+            z-index: 2;
+        }
+        .tab-label-5 {
+            z-index: 1;
+        }
+        .tabs input:checked + label {
+            background: #fff;
+            z-index: 7;
+            border: 1px solid #cacbcb;
+            border-bottom: none;
+        }
+        .clear-shadow {
+            clear: both;
+        }
+        .content {
+            background: #fff;
+            position: relative;
+            width: 100%;
+            height: 220px;
+            z-index: 5;
+            border: 1px solid #cacbcb;
+            //border-top: none;
+            ///box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 0 2px 2px 2px;
+        }
+        .content div {
+            position: absolute;
+            color: #535353;
+            font: 400 12px / 30px SimSun;
+            top: 0;
+            left: 0;
+            //                padding: 10px 40px;
+            z-index: 1;
+            opacity: 0;
+            -webkit-transition: opacity linear 0.1s;
+            -moz-transition: opacity linear 0.1s;
+            -o-transition: opacity linear 0.1s;
+            -ms-transition: opacity linear 0.1s;
+            transition: opacity linear 0.1s;
+        }
+        .tabs input.tab-selector-1:checked ~ .content .content-1,
+        .tabs input.tab-selector-2:checked ~ .content .content-2,
+        .tabs input.tab-selector-3:checked ~ .content .content-3,
+        .tabs input.tab-selector-4:checked ~ .content .content-4,
+        .tabs input.tab-selector-5:checked ~ .content .content-5 {
+            z-index: 100;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            filter: alpha(opacity=100);
+            opacity: 1;
+            -webkit-transition: opacity ease-out 0.2s 0.1s;
+            -moz-transition: opacity ease-out 0.2s 0.1s;
+            -o-transition: opacity ease-out 0.2s 0.1s;
+            -ms-transition: opacity ease-out 0.2s 0.1s;
+            transition: opacity ease-out 0.2s 0.1s;
+        }
+        .content div h2,
+        .content div h3 {
+            color: #398080;
+        }
+        .content div p {
+            font-size: 14px;
+            line-height: 22px;
+            font-style: italic;
+            text-align: left;
+            margin: 0;
+            color: #777;
+            padding-left: 15px;
+            font-family: Cambria, Georgia, serif;
+            border-left: 8px solid rgba(63, 148, 148, 0.1);
+        }
+    }
+}
+
+div.table-content {
+    div.content {
+        div[class|="content"] {
+            padding: 20px 35px;
+            th,
+            td {
+                padding: 0px 20px;
+                border: 1px solid #ddddde;
+                .hover-trans(bgc, #ddd);
+                transition: all .1s ease-in-out;
             }
-            .tabs input#tab-2 {
-                left: 120px;
-            }
-            .tabs input#tab-3 {
-                left: 240px;
-            }
-            .tabs input#tab-4 {
-                left: 360px;
-            }
-            .tabs label {
-                background: #e5e5e5;
-                height: 26px;
-                //                position: relative;
-                padding: 0 10px;
-                float: left;
-                //                display: block;
-                width: 85px;
-                margin-right: 5px;
-                color: #535353;
-                font: 400 12px / 26px 'Microsoft YaHei';
-                letter-spacing: 1px;
-                text-transform: uppercase;
-                font-weight: bold;
-                text-align: center;
-                text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
-                border-radius: 3px 3px 0 0;
-                border: 1px solid #e5e5e5;
-                border-bottom: none;
-            }
-            .tabs label:after {
-//                content: '';
-//                background: #fff;
-//                position: absolute;
-//                bottom: -2px;
-//                left: 0;
-//                width: 100%;
-//                height: 2px;
-//                display: block;
-                
-                
-            }
-            .tabs input:hover + label {
-                background: #5ba4a4;
-            }
-            .tabs label:first-of-type {
-                z-index: 5;
-                box-shadow: 2px 0 2px rgba(0, 0, 0, 0.1);
-            }
-            .tab-label-2 {
-                z-index: 4;
-            }
-            .tab-label-3 {
-                z-index: 3;
-            }
-            .tab-label-4 {
-                z-index: 2;
-            }
-             .tab-label-5 {
-                z-index: 1;
-            }
-            .tabs input:checked + label {
-                background: #fff;
-                z-index: 7;
-                border: 1px solid #cacbcb;
-                border-bottom: none;
-            }
-            .clear-shadow {
-                clear: both;
-            }
-            .content {
-                background: #fff;
-                position: relative;
-                width: 100%;
-                height: 220px;
-                z-index: 5;
-                border: 1px solid #cacbcb;
-                //border-top: none;
-                ///box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.1);
-                border-radius: 0 2px 2px 2px;
-                
-            }
-            .content div {
-                position: absolute;
-                top: 0;
-                left: 0;
-                padding: 10px 40px;
-                z-index: 1;
-                opacity: 0;
-                -webkit-transition: opacity linear 0.1s;
-                -moz-transition: opacity linear 0.1s;
-                -o-transition: opacity linear 0.1s;
-                -ms-transition: opacity linear 0.1s;
-                transition: opacity linear 0.1s;
-            }
-            .tabs input.tab-selector-1:checked ~ .content .content-1,
-            .tabs input.tab-selector-2:checked ~ .content .content-2,
-            .tabs input.tab-selector-3:checked ~ .content .content-3,
-            .tabs input.tab-selector-4:checked ~ .content .content-4,
-            .tabs input.tab-selector-5:checked ~ .content .content-5{
-                z-index: 100;
-                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-                filter: alpha(opacity=100);
-                opacity: 1;
-                -webkit-transition: opacity ease-out 0.2s 0.1s;
-                -moz-transition: opacity ease-out 0.2s 0.1s;
-                -o-transition: opacity ease-out 0.2s 0.1s;
-                -ms-transition: opacity ease-out 0.2s 0.1s;
-                transition: opacity ease-out 0.2s 0.1s;
-            }
-            .content div h2,
-            .content div h3 {
-                color: #398080;
-            }
-            .content div p {
-                font-size: 14px;
-                line-height: 22px;
-                font-style: italic;
-                text-align: left;
-                margin: 0;
-                color: #777;
-                padding-left: 15px;
-                font-family: Cambria, Georgia, serif;
-                border-left: 8px solid rgba(63, 148, 148, 0.1);
-            }
+        }
+    }
+}
+
+div.info-content {
+    position: relative;
+    padding: 15px 35px;
+    hr {
+        border: none;
+        border-top: 1px solid #e5e5e5;
+    }
+    p,
+    span {
+        color: #535353;
+        font: 400 12px / 24.57px 'Microsoft YaHei';
+        text-indent: 15px;
+    }
+    .info-title {
+        color: #c3c2c2;
+        font: 400 12px / 20.57px 'Microsoft YaHei';
+    }
+    div.price-principal {
+        .clearfix();
+        width: 100%;
+        .col-3 {
+            border: 1px solid #e5e5e5;
+            border-left: none;
+            border-right: none;
+            width: 34%;
+            float: left;
+        }
+        .col-7 {
+            border: 1px solid #e5e5e5;
+            border-right: none;
+            width: 100%-34%;
+            float: left;
+        }
+    }
+    div.detail {
+        height: 100px;
+    }
+    div.sreach-post {
+
+        p {
+            float: left;
+        }
+        input[type="checkbox"] {
+            vertical-align: text-bottom;
+            margin-right: 8px;
+        }
+        .button-style();
+        button {
+            float: right;
         }
     }
 }

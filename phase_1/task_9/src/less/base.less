@@ -1,105 +1,64 @@
-* {
-    box-sizing: border-box;
-}
-
-// Mixin itself
-.clearfix {
-    &:before,
-    &:after {
-        content: "";
-        display: table;
+    * {
+        box-sizing: border-box;
     }
-    &:after {
-        clear: both;
+    
+    .fr {
+        float: right;
     }
-}
+    
+    .fl {
+        float: left;
+    }
+    
+    ul,
+    li,
+    p,
+    h1,
+    h2,
+    h3 {
+        margin: 0;
+        padding: 0;
+    }
+    
+    li {
+        list-style-type: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    button,
+    select,
+    option,
+    input[type="text"],
+    textarea {
+        -webkit-appearance: none;
+        outline: none;
+        border: 0;
+    }
+    
+    body {
+        //    font-family: "Helvetica", "Tahoma", "Arial", "STXihei", "华文细黑", "Heiti", "黑体", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", "sans-serif";
+        font-family: "微软雅黑", "SimSun", "宋体", "sans-serif";
+        width: 100%;
+    }
+    
+    .wrapper {
+        width: 100%;
+        min-width: 1200px;
+    }
+    
+    section {
+        .clearfix();
+    }
+    /*
+some table normalize style in here
 
-.fr {
-    float: right;
-}
 
-.fl {
-    float: left;
-}
 
-ul,
-li,
-p,
-h1,
-h2,
-h3 {
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-button,
-select,
-option,
-input,
-textarea {
-    -webkit-appearance: none;
-    outline: none;
-    border: 0;
-}
-
-body {
-    //    font-family: "Helvetica", "Tahoma", "Arial", "STXihei", "华文细黑", "Heiti", "黑体", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", "sans-serif";
-    font-family: "微软雅黑", "SimSun", "宋体", "sans-serif";
-    width: 100%;
-}
-
-.wrapper {
-    width: 100%;
-    min-width: 1200px;
-}
-
-section {
-    .clearfix();
-}
-
-/*
-function
 */
-.turnover-color-block-func (@block-border-color, @border-width, @nth: 1) when ( iscolor(@block-border-color)) {
-    &:nth-of-type(@{nth}) {
-        border-left: @border-width @block-border-color solid;
-        &:after {
-            background-color: @block-border-color;
-        }
-    }
+    
+th {
+    font-weight: 500;
 }
-
-
-.hover-trans(@type, @color) when (@type =color) and (iscolor(@color)) {
-    transition: all .15s ease-in-out;
-    &:hover {
-        color: @color;
-        //transition: all .15s ease-in-out;
-    }
-}
-
-.hover-trans(@type, @color) when (@type =bgc) and (iscolor(@color)) {
-    transition: all .3s ease-in-out;
-    &:hover {
-        background-color: @color;
-        //transition: all .15s ease-in-out;
-    }
-}
-
-.focus-trans(@type, @width) when (@type =width) and (isnumber(@width)) {
-    transition: all .5s ease-in-out;
-    &:focus {
-        width: @width;
-        //transition: all .15s ease-in-out;
-    }
-}
-
-
