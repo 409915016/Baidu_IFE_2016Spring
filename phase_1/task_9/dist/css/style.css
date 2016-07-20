@@ -50,6 +50,7 @@ option,
 input[type="text"],
 textarea {
   -webkit-appearance: none;
+  -moz-appearance: none;
   outline: none;
   border: 0;
 }
@@ -905,6 +906,7 @@ div.info-content div.sreach-post button {
   float: right;
 }
 div.ranglist {
+  text-align: left;
   padding: 15px 35px;
   color: #000;
 }
@@ -940,6 +942,9 @@ div.ranglist tr:hover {
 }
 div.ranglist tr:hover {
   background-color: #f3f5f6;
+}
+div.ranglist tr:hover {
+  cursor: pointer;
 }
 div.ranglist tbody tr:nth-of-type(1) td:nth-of-type(2) span.line {
   position: relative;

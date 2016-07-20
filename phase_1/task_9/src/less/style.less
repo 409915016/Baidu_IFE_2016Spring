@@ -264,6 +264,8 @@ section.search-row {
             color: #323333;
             font: 400 12px / 26px SimHei;
             background-image: url(../img/down-b.png);
+            
+            
         }
     }
     div.search-two {
@@ -662,6 +664,7 @@ div.info-content {
 }
 
 div.ranglist {
+    text-align: left;
     padding: 15px 35px;
     color: #000;
     th,
@@ -680,6 +683,9 @@ div.ranglist {
     tr {
         .hover-trans(bgc, #f3f5f6);
         transition: all .1s ease-in-out;
+        &:hover {
+            cursor: pointer;
+        }
     }
     
     .ranglist-line(0.85, #ed6e52, 1);
