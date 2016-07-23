@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE JavaScript Task 03</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        ul {
+            margin-left: 20px;
+            vertical-align: top;
+            display: inline-block;
+            line-height: 26px;
+        }
+        
+        button {
+            margin-left: 20px;
+            margin-top: 50px;
+            border-radius: 3px;
+            background-color: dodgerblue;
+            font-size: 16px;
+            color: #333;
+            padding: 4px 8px;
+            box-shadow: 1px 1px 3px #aaa;
+            font-family: "Microsoft YaHei", "微软雅黑";
+            transition: all .15s linear;
+        }
+        
+        button#clear-btn {
+            background-color: palevioletred;
+        }
+        
+        button:hover {
+            color: #333;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>污染城市列表</h3>
+    <ul id="source">
+        <li>北京空气质量：<b>90</b></li>
+        <li>上海空气质量：<b>70</b></li>
+        <li>天津空气质量：<b>80</b></li>
+        <li>广州空气质量：<b>50</b></li>
+        <li>深圳空气质量：<b>40</b></li>
+        <li>福州空气质量：<b>32</b></li>
+        <li>成都空气质量：<b>90</b></li>
+    </ul>
+
+    <ul id="resort"></ul>
+    <br>
+    <button id="sort-btn">排序</button>
+    <button id="clear-btn">清空</button>
+
+
+    <script type="text/javascript">
+        var arr = ["一", "二", "三", "四", "五"];
+        var passNum = 60;
+        var get = function (name) {
+            return document.querySelector(name);
+        }
+        var getAll = function (name) {
+            return document.querySelectorAll(name);
+        }
+
+        function sortAqiData(data, type) {
+            if (type == "big") {
+                data.sort(function (a, b) {
+                    return b[1] - a[1];
+                    //return a[1] - b[1];
+                });
+
+            } else {
+                data.sort(function (a, b) {
+                    //return b[1] - a[1];
+                    return a[1] - b[1];
+                });
+
+            }
+
+            return data;
+        }
+
+        function getData() {
+            var sourceLi = getAll('#source li');
+            var sourceLiB = getAll('#source li b');
+            var NewaqiData = [];
+            for (i = 0; i < sourceLi.length; i++) {
+                var city = sourceLi[i].innerText.slice(0, 2).toString();
+                var aqinum = Math.abs(sourceLiB[i].innerText);
+                NewaqiData.push([city, aqinum]);
+            }
+            return NewaqiData;
+        }
+
+        function render(data) {
+            var oList = get('#resort');
+
+            for (i = 0; i < data.length; i++) {
+                if (data[i][1] > passNum) {
+                    var oB = document.createElement("b");
+                    var oLi = document.createElement("li");
+                    oB.innerHTML = data[i][1];
+                    oLi.innerHTML = "第" + arr[i] + "名：" + data[i][0] + "空气质量：";
+                    oLi.appendChild(oB);
+                    oList.appendChild(oLi);
+                }
+            }
+
+        }
+
+        function btnHandle() {
+            var resort_isempty = get('#resort').hasChildNodes();
+            //console.log(resort_isempty);
+            if (resort_isempty) {
+
+            } else {
+                var NewData = getData();
+                NewData = sortAqiData(NewData, "big");
+                render(NewData);
+            }
+
+        }
+        function clear_btnHandle() {
+            var resort = get('#resort');
+            resort.innerHTML = "";
+        }
+        function init() {
+            var btn = get("#sort-btn");
+            var clear_btn = get("#clear-btn");
+            btn.onclick = btnHandle;
+            clear_btn.onclick = clear_btnHandle;
+
+
+        }
+
+        init();
+    </script>
+</body>
+
+
+
+</html>
