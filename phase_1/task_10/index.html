@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <title>Flexbox 布局练习</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--    <link rel="stylesheet" href="css/style.css">-->
+    <link rel="Shortcut Icon" href="img/icon.png" />
+    <script src=""></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font: 24px Helvetica;
+            background: #fff;
+        }
+        
+        .wrapper {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+        }
+        
+        .block {
+            width: 150px;
+            border: 1px red solid;
+            margin: 0 20px;
+        }
+        
+        .block:nth-of-type(1) {
+            height: 120px;
+        }
+        
+        .block:nth-of-type(2) {
+            height: 100px;
+        }
+        
+        .block:nth-of-type(3) {
+            height: 40px;
+        }
+        
+        .block:nth-of-type(4) {
+            height: 200px;
+            border-color: blue;
+        }
+        
+        @media all and (max-width: 640px) {
+            .wrapper {
+                align-items: flex-start;
+                flex-flow: row wrap;
+            }
+            .block {
+                order: 1;
+                margin-top: 20px;
+            }
+            .block:nth-of-type(4) {
+                order: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+</body>
+
+</html>
