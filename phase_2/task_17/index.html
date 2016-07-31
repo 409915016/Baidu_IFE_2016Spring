@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE JavaScript Task 03</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!--    <link rel="stylesheet" href="css/style.css">-->
+
+    <style>
+        .wrapper {
+            width: 1366px;
+            margin: 0 auto;
+            text-align: center;
+            font-family: "Helvetica", "Tahoma", "Arial", "STXihei", "华文细黑", "Heiti", "黑体", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", "sans-serif";
+        }
+        
+        ul {
+            margin-left: 20px;
+            vertical-align: top;
+            display: inline-block;
+            line-height: 26px;
+        }
+        
+        button {
+            -webkit-appearance: none;
+            border: 0;
+            margin-left: 20px;
+            margin-top: 50px;
+            border-radius: 3px;
+            background-color: dodgerblue;
+            font-size: 16px;
+            color: #333;
+            padding: 4px 8px;
+            box-shadow: 1px 1px 3px #aaa;
+            font-family: "Microsoft YaHei", "微软雅黑";
+            transition: all .15s linear;
+        }
+        
+        button#clear-btn {
+            background-color: palevioletred;
+        }
+        
+        button:hover {
+            color: #333;
+            background-color: cornflowerblue;
+        }
+        
+
+        
+        button[data-cityname] {
+            margin: 0;
+        }
+        .aqi-chart-wrap span {
+            display: inline-block;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <fieldset id="form-gra-time">
+            <legend>请选择日期粒度：</legend>
+            <label>日
+                <input name="gra-time" value="day" type="radio" checked="checked">
+            </label>
+            <label>周
+                <input name="gra-time" value="week" type="radio">
+            </label>
+            <label>月
+                <input name="gra-time" value="month" type="radio">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>请选择查看的城市：</legend>
+            <select id="city-select">
+                
+            </select>
+        </fieldset>
+
+        <div class="aqi-chart-wrap">
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+
+
+</html>
