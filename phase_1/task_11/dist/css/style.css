@@ -55,7 +55,7 @@ textarea {
   border: 0;
 }
 body {
-  font-family: "Helvetica", "Tahoma", "Arial", "STXihei", "华文细黑", "Heiti", "黑体", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", "sans-serif";
+  font-family: "微软雅黑", "SimSun", "宋体", "sans-serif";
   width: 100%;
 }
 section:before,
@@ -308,11 +308,15 @@ section.article div.article-piece {
   background-color: #fff;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: flex-start;
   padding: 0.25rem 0.3rem;
 }
-section.article div.article-piece img {
+section.article div.article-piece div.article-piece-img {
   width: 2.8rem;
   height: 2rem;
+}
+section.article div.article-piece div.article-piece-img img {
+  width: 100%;
 }
 section.article div.article-piece div.article-text {
   padding: 0 0.3rem;
@@ -362,14 +366,17 @@ section.article div.article-block div.article-block-img {
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-section.article div.article-block div.article-block-img img {
+section.article div.article-block div.article-block-img div.article-block-img-content {
   width: 3.05rem;
   height: 2rem;
+}
+section.article div.article-block div.article-block-img div.article-block-img-content img {
+  width: 100%;
 }
 section.article div.article-block span {
   color: #999;
   font-size: 12px;
-  line-height: 0.8rem;
+  line-height: 1rem;
 }
 [data-dpr="2"] section.article div.article-block span {
   font-size: 24px;

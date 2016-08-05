@@ -206,14 +206,16 @@ section.article {
         background-color: #fff;
         display: flex;
         flex-flow: row nowrap;
+        justify-content: flex-start;
         padding: 25/100rem 30/100rem;
-        
-        img {
+        div.article-piece-img {
             width: 280/100rem;
             height: 200/100rem;
+            img {
+                width: 100%
 
+            }
         }
-
 
         div.article-text {
             padding: 0 30/100rem;
@@ -222,6 +224,7 @@ section.article {
             justify-content: space-between;
             h3 {
                 .font-dpr(16px);
+                
             }
             span {
                 color: #999;
@@ -248,16 +251,22 @@ section.article {
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
-            img {
+            div.article-block-img-content {
                 width: 305/100rem;
                 height: 200/100rem;
+                img {
+                    width: 100%;
+                }
             }
+            
+
+            
             
         }
         span {
                 color: #999;
                 .font-dpr(12px);
-                line-height: 80/100rem;
+                line-height: 100/100rem;
             }
         
     }
