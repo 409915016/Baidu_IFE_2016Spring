@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+ul,
+li,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+button,
+select,
+option,
+input,
+textarea {
+  -webkit-appearance: none;
+  /*去除input默认样式*/
+  outline: none;
+  border: 0;
+}
+body {
+  font-family: "微软雅黑", "SimSun", "宋体", "sans-serif";
+  width: 100%;
+}
+section:before,
+section:after {
+  content: "";
+  display: table;
+}
+section:after {
+  clear: both;
+}
+.wrapper {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Helvetica", "Tahoma", "Arial", "STXihei", "华文细黑", "Heiti", "黑体", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", "sans-serif";
+}
+.wrapper .span-wrapper,
+.wrapper fieldset {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  min-height: 120px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.075);
+}
+.wrapper .span-wrapper span,
+.wrapper fieldset span {
+  margin-left: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  line-height: 50px;
+  font-size: 19px;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px #aaa;
+  background-color: lightyellow;
+  transition: all .15s linear;
+}
+.wrapper .span-wrapper span:hover,
+.wrapper fieldset span:hover {
+  background-color: palevioletred;
+}
+fieldset {
+  padding: 0;
+  margin-left: 0;
+}
+.span-wrapper {
+  padding: 20px;
+  text-align: left;
+  width: 420px;
+  margin: 0 auto;
+  font-size: 0;
+}
+button {
+  -webkit-appearance: none;
+  outline: none;
+  border: 0;
+  margin-left: 20px;
+  margin-top: 20px;
+  border-radius: 3px;
+  background-color: dodgerblue;
+  font-size: 16px;
+  color: #333;
+  padding: 4px 8px;
+  box-shadow: 1px 1px 3px #aaa;
+  font-family: "Microsoft YaHei", "微软雅黑";
+  transition: all .15s linear;
+}
+button:hover {
+  color: #333;
+  background-color: cornflowerblue;
+}
+label {
+  vertical-align: text-bottom;
+}
+input {
+  outline: none;
+}
+input#input-num {
+  width: 120px;
+  margin: 0 auto;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 4px 8px;
+  font-size: 12px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
