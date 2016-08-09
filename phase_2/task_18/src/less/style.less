@@ -24,10 +24,20 @@
             cursor: pointer;
             border-radius: 3px;
             box-shadow: 1px 1px 3px #aaa;
-            background-color: lightyellow;
+            //background-color: lightyellow;
             transition: all .15s linear;
             &:hover {
-                background-color: palevioletred;
+                //background-color: palevioletred;
+                opacity: .5;
+                cursor: pointer;
+            }
+            &.removing {
+                opacity: 0;
+                width: 0px;
+                animation: hide 0.5s ease-in-out;
+            }
+            &.apping {
+                animation: appear 0.5s ease-in-out;
             }
         }
     }
@@ -84,4 +94,18 @@ input#input-num {
     padding: 4px 8px;
     font-size: 12px;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+        width: 50px;
+    }
+}
+
+@keyframes appear {
+    0% {
+        width: 0;
+    }
 }
