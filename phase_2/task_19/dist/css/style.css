@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.fr {
+  float: right;
+}
+.fl {
+  float: left;
+}
+ul,
+li,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+button,
+select,
+option,
+input,
+textarea {
+  -webkit-appearance: none;
+  /*去除input默认样式*/
+  outline: none;
+  border: 0;
+}
+body {
+  font-family: "微软雅黑", "SimSun", "宋体", "sans-serif";
+  width: 100%;
+}
+section:before,
+section:after {
+  content: "";
+  display: table;
+}
+section:after {
+  clear: both;
+}
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Helvetica", "Tahoma", "Arial", "STXihei", "华文细黑", "Heiti", "黑体", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", "sans-serif";
+}
+.wrapper .span-wrapper,
+.wrapper fieldset {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  min-height: 120px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.075);
+  position: relative;
+}
+.wrapper .span-wrapper span,
+.wrapper fieldset span {
+  position: relative;
+  vertical-align: bottom;
+  margin-left: 8px;
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 19px;
+  text-align: center;
+  width: 7px;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 1px 1px 3px #aaa;
+  transition: all .15s linear;
+  background-color: #0af;
+}
+.wrapper .span-wrapper span:after,
+.wrapper fieldset span:after {
+  position: absolute;
+  content: attr(title);
+  font-size: 12px;
+  top: -15px;
+  left: calc(50% - 6px);
+  color: #111;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-shadow: 0px 0px 1px #999;
+}
+.wrapper .span-wrapper span:hover,
+.wrapper fieldset span:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+.wrapper .span-wrapper span.removing,
+.wrapper fieldset span.removing {
+  opacity: 0;
+  width: 0px;
+  animation: hide 0.3s ease-in-out;
+}
+.wrapper .span-wrapper span.apping,
+.wrapper fieldset span.apping {
+  animation: appear 0.5s ease-in-out;
+}
+fieldset {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+.span-wrapper {
+  background-color: aliceblue;
+  padding: 20px 45px;
+  text-align: left;
+  width: 1000px;
+  vertical-align: bottom;
+  height: 250px;
+  margin: 0 auto;
+  font-size: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+}
+button {
+  -webkit-appearance: none;
+  outline: none;
+  border: 0;
+  margin-left: 5px;
+  margin-top: 20px;
+  border-radius: 3px;
+  background-color: dodgerblue;
+  font-size: 16px;
+  color: #efefef;
+  padding: 4px 8px;
+  box-shadow: 1px 1px 3px #aaa;
+  font-family: "Microsoft YaHei", "微软雅黑";
+  transition: all .15s linear;
+}
+button:hover {
+  color: #efefef;
+  background-color: cornflowerblue;
+}
+label {
+  vertical-align: text-bottom;
+}
+input {
+  outline: none;
+}
+input#input-num {
+  text-align: center;
+  width: 60px;
+  margin: 0 auto;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 4px 8px;
+  font-size: 12px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+    width: 7px;
+  }
+}
+@keyframes appear {
+  0% {
+    height: 0;
+  }
+}
