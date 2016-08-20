@@ -105,7 +105,7 @@ function leftOut() {
     blockWrapper.firstElementChild.className += 'removing';
     setTimeout(function() {
         blockWrapper.removeChild(blockWrapper.firstElementChild)
-    }, 1000);
+    }, 500);
     tagData.shift();
 
 }
@@ -118,7 +118,7 @@ function rightOut() {
     blockWrapper.lastElementChild.className += 'removing';
     setTimeout(function() {
         blockWrapper.removeChild(blockWrapper.lastElementChild)
-    }, 1000);
+    }, 500);
     tagData.pop();
 }
 
@@ -132,7 +132,7 @@ function removeTag(event) {
 
         setTimeout(function() {
             blockWrapper.removeChild(event.target);
-        }, 1000);
+        }, 500);
 
         tagData.forEach(function(element, index) {
             if (element == delTagName) {
