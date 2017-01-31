@@ -8,8 +8,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
-    <!--    <link rel="stylesheet" href="css/style.css">-->
-
     <style>
         .wrapper {
             width: 380px;
@@ -17,14 +15,14 @@
             text-align: center;
             font-family: "Helvetica", "Tahoma", "Arial", "STXihei", "华文细黑", "Heiti", "黑体", "Microsoft YaHei", "微软雅黑", "SimSun", "宋体", "sans-serif";
         }
-        
+
         ul {
             margin-left: 20px;
             vertical-align: top;
             display: inline-block;
             line-height: 26px;
         }
-        
+
         button {
             -webkit-appearance: none;
             border: 0;
@@ -39,16 +37,16 @@
             font-family: "Microsoft YaHei", "微软雅黑";
             transition: all .15s linear;
         }
-        
+
         button#clear-btn {
             background-color: palevioletred;
         }
-        
+
         button:hover {
             color: #333;
             background-color: cornflowerblue;
         }
-        
+
         input {
             -webkit-appearance: none;
             border-radius: 3px;
@@ -62,11 +60,12 @@
             transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
             color: #333;
         }
-        
+
         input:focus {
             border-color: steelblue;
             box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
         }
+
         button[data-cityname] {
             margin: 0;
         }
@@ -74,43 +73,21 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <label>城市名称：
-            <input id="aqi-city-input" type="text" placeholder="城市名称" value="George">
-        </label>
-        <br>
-        <label>空气质量指数：
-            <input id="aqi-value-input" type="text" placeholder="空气质量指数" value="90">
-        </label>
-        <br>
-        <button id="add-btn">确认添加</button>
-    </div>
-    <table id="aqi-table">
-        <!-- 
-        <thead>
-    <tr>
-      <td>城市</td><td>空气质量</td><td>操作</td>
-    </tr>
-    
-    </thead>
-    
-    
-    <tbody>
-    <tr>
-      <td>北京</td><td>90</td><td><button>删除</button></td>
-    </tr>
-    <tr>
-      <td>北京</td><td>90</td><td><button>删除</button></td>
-    </tr>
-    
-     </tbody>
-   -->
-    </table>
+<div class="wrapper">
+    <label>城市名称：
+        <input id="aqi-city-input" type="text" placeholder="城市名称" value="George">
+    </label>
+    <br>
+    <label>空气质量指数：
+        <input id="aqi-value-input" type="text" placeholder="空气质量指数" value="90">
+    </label>
+    <br>
+    <button id="add-btn">确认添加</button>
+</div>
+<table id="aqi-table">
+</table>
 
-    <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 
 </body>
-
-
-
 </html>

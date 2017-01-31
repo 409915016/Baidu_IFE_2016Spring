@@ -14,7 +14,7 @@
 <body>
     <h3>污染城市列表</h3>
     <ul id="aqi-list">
-        <!--   
+        <!--
     <li>第一名：福州（样例），10</li>
   	<li>第二名：福州（样例），10</li> -->
     </ul>
@@ -37,13 +37,13 @@
         var get = function (name) {
             return document.querySelector(name);
         }
-        
+
         var oList = get('#aqi-list');
         aqiData.sort(function (a, b) {
             return b[1] - a[1];
         });
-                
-        for (i = 0; i < aqiData.length; i++) {
+
+        for (var i = 0; i < aqiData.length; i++) {
             if (aqiData[i][1] > passNum) {
                 var oLi = document.createElement("li");
                 oLi.innerHTML = "第" + arr[i] + "名 " + aqiData[i][0] + " " + aqiData[i][1];

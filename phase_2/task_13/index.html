@@ -11,49 +11,43 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <label><span>请输入北京今天空气质量：</span>
-        <input id="aqi-input" type="text">
-    </label>
-    <button id="button">确认填写</button>
+<body><label><span>请输入北京今天空气质量：</span>
+    <input id="aqi-input" type="text">
+</label>
+<button id="button">确认填写</button>
+<div>
+    <p>您输入的值是：<span id="aqi-display">尚无录入</span></p>
+</div>
+<script type="text/javascript">
+    //    在注释下方写下代码
+    //    给按钮button绑定一个点击事件
+    //    在事件处理函数中
+    //    获取aqi-input输入的值，并显示在aqi-display中
 
-    <div>
-        <p>您输入的值是：<span id="aqi-display">尚无录入</span></p>
-    </div>
+    var get = function (name) {
+        return document.querySelector(name);
 
-    <script type="text/javascript">
-        //    在注释下方写下代码
-        //    给按钮button绑定一个点击事件
-        //    在事件处理函数中
-        //    获取aqi-input输入的值，并显示在aqi-display中
+    }
 
-        var get = function (name) {
-            return document.querySelector(name);
-
+    var inputHeadler = function () {
+        var num = parseInt(get("#aqi-input").value);
+        if ((!isNaN(num)) && (num >= 0)) {
+            get("#aqi-display").innerHTML = num;
+        } else {
+            get("#aqi-display").innerHTML = (get("#aqi-input").value + "输入的不是有效值，请重新输入！")
         }
 
-        var inputHeadler = function () {
-            var num = parseInt(get("#aqi-input").value);
-            if ((!isNaN(num)) && (num >= 0)) {
-                get("#aqi-display").innerHTML = num;
-            } else {
-                get("#aqi-display").innerHTML = (get("#aqi-input").value + "输入的不是有效值，请重新输入！")
-            }
+    }
 
-        }
-
-        get("#button").onclick = function () {
+    get("#button").onclick = function () {
+        inputHeadler();
+    }
+    get("#aqi-input").onkeyup = function (even) {
+        if (even.keyCode == 13) {
             inputHeadler();
         }
-        get("#aqi-input").onkeyup = function (even) {
-            if (even.keyCode == 13) {
-                inputHeadler();
-            }
-
-        }
-    </script>
+    }
+</script>
 </body>
-
-
 
 </html>

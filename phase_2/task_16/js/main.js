@@ -4,10 +4,10 @@ var passNum = 60;
 
 var get = function (name) {
     return document.querySelector(name);
-}
+};
 var getAll = function (name) {
     return document.querySelectorAll(name);
-}
+};
 
 var city_name_input = get('#aqi-city-input');
 var aqi_value_input = get('#aqi-value-input');
@@ -60,7 +60,6 @@ function init() {
         function (event) {
             if (event.target.localName == "button") del_btnHandle(event.target.dataset.cityname);
         })
-
 }
 
 init();
