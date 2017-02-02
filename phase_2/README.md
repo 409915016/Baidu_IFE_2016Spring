@@ -348,6 +348,7 @@ console.log(s2.foo); // undefined
 
 ```Math.E  ``` 属性中值为欧拉常数。
 
+
 其它的属性中储存了一些常用的常数。
 
 
@@ -365,6 +366,14 @@ Math.abs("string"); // NaN
 Math.abs();         // NaN
 
 ```
+
+
+```Math.round()``` 把一个数字舍入为最接近的整数。直接使用该方法则返回一个小于```1```的有限位小数。
+
+
+
+
+
 #### Document.createElement()
 
 ```Document.createElement() ```方法用于创建指定的HTML元素。
@@ -605,6 +614,284 @@ if (3 in trees) {
 ####  Array.prototype.splice()
 
 ```splice()``` 方法通过删除现有元素或添加新元素来更改数组的内容。
+
+
+
+###### 语法 
+
+>  ```array.splice(start)``` 
+>  
+>  ```array.splice(start, deleteCount) ``` 
+>  
+>  ```array.splice(start, deleteCount, item1, item2, ...)```
+
+
+###### 参数
+
+- ```start```
+数组开始修改的位置，下标从 ```0 ``` 开始。
+如果超出了数组的长度，则位置从数组末尾开始；
+如果是负值，则表示从数组末位开始的第几位。。
+
+- ```deleteCount ```   ```可选```
+整数，要移除的数组元素的个数。
+如果是 ```0``` ，则不移除元素。
+这种情况下，至少应添加一个新元素。
+如果大于 ```start``` ，初始位置到末尾元素的总数，则包括 ```start``` 后面的元素都会被删除。
+
+- ```item1, item2, ...  ``` ```可选```
+添加进数组的元素，从 ```start``` 位置开始。
+如果不指定，那么只删除数组元素。
+
+###### 返回
+
+包含 **被删除的元素** 的数组。
+
+- 如果只删除了一个元素，则返回只包含一个元素的数组。
+
+- 如果没有删除元素，则返回空数组。
+
+
+
+###### 举个栗子
+
+```
+
+var myFish = ["angel", "clown", "mandarin", "surgeon"];
+
+
+```
+
+使用数组 ```myFish``` 运用 ```splice()``` 进行一系列操作：
+
+
+- 从第 2 位开始删除 0 个元素，插入 ```"drum"```
+
+```
+
+
+var removed = myFish.splice(2, 0, "drum");
+//运算后的 myFish:["angel", "clown", "drum", "mandarin", "surgeon"]
+//被删除元素数组：[]，没有元素被删除
+
+
+```
+
+- 从第 3 位开始删除 1 个元素
+
+
+```
+removed = myFish.splice(3, 1);
+//运算后的myFish：["angel", "clown", "drum", "surgeon"]
+//被删除元素数组：["mandarin"]
+
+
+```
+
+- 从第 2 位开始删除 1 个元素，然后插入 ```"trumpet"```
+
+```
+
+removed = myFish.splice(2, 1, "trumpet");
+//运算后的myFish: ["angel", "clown", "trumpet", "surgeon"]
+//被删除元素数组：["drum"]
+
+
+```
+
+- 从第 0 位开始删除 2 个元素，然后插入 ```"parrot"```   ```"anemone"``` 和 ```"blue"```
+
+```
+
+removed = myFish.splice(0, 2, "parrot", "anemone", "blue");
+//运算后的myFish：["parrot", "anemone", "blue", "trumpet", "surgeon"]
+//被删除元素的数组：["angel", "clown"]
+
+
+```
+
+- 从第 3 位开始删除 2 个元素
+
+```
+
+
+removed = myFish.splice(3, Number.MAX_VALUE);
+//运算后的myFish: ["parrot", "anemone", "blue"]
+//被删除元素的数组：["trumpet", "surgeon"]
+
+```
+
+1. ```Number.MAX_VALUE ```  表示在 JavaScript 里所能表示的最大数值。这里用来表示数组的末尾。
+2. ``` event.target``` 指触发事件的对象。
+3. 与 ```Array.prototype.splice()``` 相近的 ```Array.prototype.slice()``` 则用来返回原数组的浅拷贝。
+
+
+**参考资料**
+
+> - [JavaScript入门篇][4]
+> - [MDN JavaScript][5]
+
+
+
+
+
+## [任务十七：零基础JavaScript编码（五）](http://ife.baidu.com/2016/task/detail?taskId=17)
+**任务描述**
+
+> - 参考以下示例代码，原始数据包含几个城市的空气质量指数数据
+> - 用户可以选择查看不同的时间粒度，以选择要查看的空气质量指数是以天为粒度还是以周或月为粒度
+> - 天：显示每天的空气质量指数
+> - 周：以自然周（周一到周日）为粒度，统计一周7天的平均数为这一周的空气质量数值，如果数据中缺少一个自然周的几天，则按剩余天进行计算
+> - 月：以自然月为粒度，统一一个月所有天的平均数为这一个月的空气质量数值
+> - 用户可以通过select切换城市
+> - 通过在"aqi-chart-wrap"里添加DOM，来模拟一个柱状图图表，横轴是时间，纵轴是空气质量指数，参考图（点击打开）。天、周、月的数据只根据用户的选择显示一种。
+> - 天：每天的数据是一个很细的矩形
+> - 周：每周的数据是一个矩形
+> - 月：每周的数据是一个很粗的矩形
+> - 鼠标移动到柱状图的某个柱子时，用title属性提示这个柱子的具体日期和数据
+
+
+
+**任务注意事项**
+
+> - 实现简单功能的同时，请仔细学习JavaScript基本语法、事件、DOM相关的知识
+> - 请注意代码风格的整齐、优雅
+> - 代码中含有必要的注释
+> - 示例图仅为参考，不需要完全一致
+> - 点击select或者radio选项时，如果没有发生变化，则图表不需要重新渲染
+> - 建议不使用任何第三方库、框架
+> - 示例代码仅为示例，可以直接使用，也可以完全自己重写
+
+
+Demo | [Sourse](https://github.com/409915016/Baidu_IFE_2016Spring/tree/master/phase_2/task_17)
+
+
+**任务总结**
+
+
+#### Number Object 
+
+```Number``` 对象是经过封装的能让你处理数字值的对象。```Number``` 对象由 ```Number()``` 构造器创建。
+
+###### 语法 
+
+
+```var num = new Number(value);```
+
+###### 参数
+
+- ```value```
+被创建对象的数字值。
+
+###### 属性
+
+``` Number.MAX_VALUE ``` 属性表示在 JavaScript 里所能表示的最大数值。
+
+###### 方法
+
+
+##### Number.prototype.toString()
+
+
+```toString()``` 方法返回 ```Number``` 对象的字符串。
+
+
+**语法** ```numObj.toString([radix])``` 
+
+**参数**
+- ```radix``` 符串的转换的基数(从2到36)。如果未指定 radix 参数，则默认值为 10。
+
+Number 对象覆盖了 Object 对象上的 toString() 方法，它不是继承的 Object.prototype.toString()。对于 Number 对象，toString() 方法以指定的基数返回该对象的字符串表示。
+
+如果转换的基数大于10，则会使用字母来表示大于9的数字，比如基数为16的情况，则使用a到f的字母来表示10到15。
+
+ 如果基数没有指定，则使用 10。
+如果对象是负数，则会保留负号。即使radix是2时也是如此：返回的字符串包含一个负号（-）前缀和正数的二进制表示，不是 数值的二进制补码。
+
+
+```
+var count = 10;
+
+print( count.toString() );   // 输出 "10"
+print( (17).toString() );    // 输出 "17"
+
+var x = 6;
+
+print( x.toString(2) );      // 输出 "110"
+print( (254).toString(16) ); // 输出 "fe"
+
+
+print( (-10).toString(2) ); // 输出 "-1010"
+print( (-0xff).toString() ); // 输出 "-11111111"
+
+
+
+
+
+```
+
+
+
+#### String.prototype.substring()
+
+```substring()``` 返回字符串两个索引之间（或到字符串末尾）的子串。
+
+
+
+###### 语法 
+
+
+```str.substring(indexStart[, indexEnd])```
+
+###### 参数
+
+- ```indexStart```
+一个 0 到字符串长度之间的整数。
+
+- ```indexEnd```
+可选。一个 0 到字符串长度之间的整数。
+
+
+- 如果 indexStart 等于 indexEnd，substring 返回一个空字符串。
+- 如果省略 indexEnd，substring 提取字符一直到字符串末尾。
+- 如果任一参数小于 0 或为 NaN，则被当作 0。
+- 如果任一参数大于 stringName.length，则被当作 stringName.length。
+- 如果 indexStart 大于 indexEnd，则 substring 的执行效果就像两个参数调换了一样。例如，str.substring(1, 0) == str.substring(0, 1)。
+
+
+###### 举个栗子
+
+```
+
+var anyString = "Mozilla";
+
+// 输出 "Moz"
+console.log(anyString.substring(0,3));
+console.log(anyString.substring(3,0));
+console.log(anyString.substring(3,-3));
+console.log(anyString.substring(3,NaN));
+console.log(anyString.substring(-2,3));
+console.log(anyString.substring(NaN,3));
+
+// 输出 "lla"
+console.log(anyString.substring(4,7));
+console.log(anyString.substring(7,4));
+
+// 输出 ""
+console.log(anyString.substring(4,4));
+
+// 输出 "Mozill"
+console.log(anyString.substring(0,6));
+
+// 输出 "Mozilla"
+console.log(anyString.substring(0,7));
+console.log(anyString.substring(0,10));
+console.log(anyString.substring(-2,7));
+console.log(anyString.substring(NaN,7));
+console.log(anyString.substring(0,10));
+
+
+```
 
 
 

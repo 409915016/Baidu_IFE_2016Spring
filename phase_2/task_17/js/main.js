@@ -10,10 +10,10 @@ var aqiSourceData = {
 */
 var get = function (name) {
     return document.querySelector(name);
-}
+};
 var getAll = function (name) {
     return document.querySelectorAll(name);
-}
+};
 
 //获取随机颜色
 function randomColor() {
