@@ -852,17 +852,19 @@ print( (-0xff).toString() ); // 输出 "-11111111"
 可选。一个 0 到字符串长度之间的整数。
 
 
-- 如果 indexStart 等于 indexEnd，substring 返回一个空字符串。
-- 如果省略 indexEnd，substring 提取字符一直到字符串末尾。
-- 如果任一参数小于 0 或为 NaN，则被当作 0。
-- 如果任一参数大于 stringName.length，则被当作 stringName.length。
-- 如果 indexStart 大于 indexEnd，则 substring 的执行效果就像两个参数调换了一样。例如，str.substring(1, 0) == str.substring(0, 1)。
+###### 说明
+
+
+- 如果 ```indexStart``` 等于 ```indexEnd```，```substring()``` 返回一个空字符串。
+- 如果省略 ```indexEnd```，```substring()``` 提取字符一直到字符串末尾。
+- 如果任一参数小于 ```0``` 或为 ```NaN```，则被当作 ```0```。
+- 如果任一参数大于 ```stringName.length```，则被当作 ```stringName.length```。
+- 如果 ```indexStart``` 大于 ```indexEnd```，则 substring 的执行效果就像两个参数调换了一样。例如，```str.substring(1, 0) == str.substring(0, 1)```。
 
 
 ###### 举个栗子
 
 ```
-
 var anyString = "Mozilla";
 
 // 输出 "Moz"
@@ -892,6 +894,64 @@ console.log(anyString.substring(0,10));
 
 
 ```
+
+
+#### Date Instance 
+
+Date 实例用来处理日期和时间。Date 对象基于1970年1月1日（世界标准时间）起的毫秒数。
+
+
+###### 构造函数
+
+```
+new Date();
+new Date(value);
+new Date(dateString);
+new Date(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);
+
+```
+
+
+###### 参数
+
+- ```indexStart```
+一个 0 到字符串长度之间的整数。
+
+- ```indexEnd```
+可选。一个 0 到字符串长度之间的整数。
+
+
+###### 说明
+
+
+- 如果 ```indexStart``` 等于 ```indexEnd```，```substring()``` 返回一个空字符串。
+- 如果省略 ```indexEnd```，```substring()``` 提取字符一直到字符串末尾。
+- 如果任一参数小于 ```0``` 或为 ```NaN```，则被当作 ```0```。
+- 如果任一参数大于 ```stringName.length```，则被当作 ```stringName.length```。
+- 如果 ```indexStart``` 大于 ```indexEnd```，则 substring 的执行效果就像两个参数调换了一样。例如，```str.substring(1, 0) == str.substring(0, 1)```。
+
+
+###### 举个栗子
+
+
+```
+
+var today = new Date();
+var today = new Date(1453094034000); // by timestamp(accurate to the millimeter)
+var birthday = new Date('December 17, 1995 03:24:00');
+var birthday = new Date('1995-12-17T03:24:00');
+var birthday = new Date(1995, 11, 17);
+var birthday = new Date(1995, 11, 17, 3, 24, 0);
+
+var unixTimestamp = Date.now(); // in milliseconds
+
+
+
+```
+
+
+
+
 
 
 
